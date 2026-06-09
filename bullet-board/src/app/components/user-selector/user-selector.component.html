@@ -1,0 +1,145 @@
+@if (store.currentUser(); as user) {
+  <div class="user-selector" (mouseleave)="dropdownOpen.set(false)">
+    <button class="user-btn" (click)="dropdownOpen.update(v => !v)">
+      <span class="avatar">{{ initials() }}</span>
+      <span class="user-name">{{ fullName }}</span>
+      <i class="fa-solid fa-chevron-down chevron" [class.rotated]="dropdownOpen()"></i>
+    </button>
+
+    @if (dropdownOpen()) {
+      <div class="dropdown">
+        <div class="dropdown-user-info">
+          <span class="avatar lg">{{ initials() }}</span>
+          <div>
+            <p class="info-name">{{ fullName }}</p>
+            <p class="info-email">{{ user.email }}</p>
+          </div>
+        </div>
+        <div class="dropdown-divider"></div>
+        <button class="dropdown-item sign-out" (click)="store.logout(); dropdownOpen.set(false)">
+          <i class="fa-solid fa-right-from-bracket"></i>
+          Sign out
+        </button>
+      </div>
+    }
+  </div>
+} @else {
+  <button class="sign-in-btn" (click)="openModal('signin')">
+    <i class="fa-solid fa-user"></i>
+    Sign in
+  </button>
+}
+
+@if (modalOpen()) {
+  <div class="modal-backdrop" (click)="closeModal()"></div>
+  <div class="modal" role="dialog" aria-modal="true">
+    <div class="modal-header">
+      <h2>{{ mode() === 'signin' ? 'Sign in' : 'Register' }}</h2>
+      <button class="close-btn" (click)="closeModal()" aria-label="Close">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    @if (mode() === 'signin') {
+      <form class="modal-body" [formGroup]="signInForm" (ngSubmit)="submitSignIn()">
+        <div class="field">
+          <label>Email <span class="required">*</span></label>
+          <input formControlName="email" type="email" placeholder="alice@example.com" />
+          @if (signInForm.controls.email.touched && signInForm.controls.email.errors) {
+            <span class="field-error">Enter a valid email address</span>
+          }
+        </div>
+
+        <div class="field">
+          <label>Password <span class="required">*</span></label>
+          <input formControlName="password" type="password" placeholder="••••••••" />
+          @if (signInForm.controls.password.touched && signInForm.controls.password.errors?.['required']) {
+            <span class="field-error">Password is required</span>
+          }
+        </div>
+
+        @if (error()) {
+          <p class="auth-error">{{ error() }}</p>
+        }
+
+        <div class="modal-actions">
+          <button type="button" class="btn-cancel" (click)="closeModal()">Cancel</button>
+          <button type="submit" class="btn-submit" [disabled]="loading()">
+            @if (loading()) { Signing in… } @else { Sign in }
+          </button>
+        </div>
+
+        <p class="auth-switch">
+          Don't have an account?
+          <button type="button" class="link-btn" (click)="switchMode('register')">Register</button>
+        </p>
+      </form>
+    } @else {
+      <form class="modal-body" [formGroup]="registerForm" (ngSubmit)="submitRegister()">
+        <div class="field">
+          <label>Email <span class="required">*</span></label>
+          <input formControlName="email" type="email" placeholder="alice@example.com" />
+          @if (registerForm.controls.email.touched && registerForm.controls.email.errors) {
+            <span class="field-error">Enter a valid email address</span>
+          }
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label>First name <span class="required">*</span></label>
+            <input formControlName="firstName" placeholder="Alice" />
+            @if (registerForm.controls.firstName.touched && registerForm.controls.firstName.errors?.['required']) {
+              <span class="field-error">First name is required</span>
+            }
+            @if (registerForm.controls.firstName.touched && registerForm.controls.firstName.errors?.['minlength']) {
+              <span class="field-error">First name is too short</span>
+            }
+            @if (registerForm.controls.firstName.touched && registerForm.controls.firstName.errors?.['maxlength']) {
+              <span class="field-error">First name is too long</span>
+            }
+          </div>
+          <div class="field">
+            <label>Last name <span class="required">*</span></label>
+            <input formControlName="lastName" placeholder="Martin" />
+            @if (registerForm.controls.lastName.touched && registerForm.controls.lastName.errors?.['required']) {
+              <span class="field-error">Last name is required</span>
+            }
+            @if (registerForm.controls.lastName.touched && registerForm.controls.lastName.errors?.['minlength']) {
+              <span class="field-error">Last name is too short</span>
+            }
+            @if (registerForm.controls.lastName.touched && registerForm.controls.lastName.errors?.['maxlength']) {
+              <span class="field-error">Last name is too long</span>
+            }
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Password <span class="required">*</span></label>
+          <input formControlName="password" type="password" placeholder="••••••••" />
+          @if (registerForm.controls.password.touched && registerForm.controls.password.errors?.['required']) {
+            <span class="field-error">Password is required</span>
+          }
+          @if (registerForm.controls.password.touched && registerForm.controls.password.errors?.['minlength']) {
+            <span class="field-error">Password must be at least 6 characters</span>
+          }
+        </div>
+
+        @if (error()) {
+          <p class="auth-error">{{ error() }}</p>
+        }
+
+        <div class="modal-actions">
+          <button type="button" class="btn-cancel" (click)="closeModal()">Cancel</button>
+          <button type="submit" class="btn-submit" [disabled]="loading()">
+            @if (loading()) { Registering… } @else { Register }
+          </button>
+        </div>
+
+        <p class="auth-switch">
+          Already have an account?
+          <button type="button" class="link-btn" (click)="switchMode('signin')">Sign in</button>
+        </p>
+      </form>
+    }
+  </div>
+}

@@ -1,0 +1,54 @@
+<article class="ad-card" [class.expanded]="expanded()" [class.deleting]="deleting()" (click)="toggle()">
+    <div class="header-right">
+      @if (isOwned && !confirmingDelete()) {
+        <div class="card-actions" (click)="$event.stopPropagation()">
+          <button class="action-btn edit" (click)="onEdit($event)" title="Edit">
+            <i class="fa-solid fa-pen"></i>
+          </button>
+          <button class="action-btn delete" (click)="onDeleteClick($event)" title="Delete">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+        </div>
+      }
+      @if (confirmingDelete()) {
+        <div class="confirm-delete" (click)="$event.stopPropagation()">
+          <span>Delete?</span>
+          <button class="confirm-btn yes" (click)="confirmDelete($event)" [disabled]="deleting()">Yes</button>
+          <button class="confirm-btn no" (click)="cancelDelete($event)">No</button>
+        </div>
+      }
+    </div>
+
+  <div class="card-header">
+    <span class="category-badge" [style]="badgeHue(ad().category.id)">{{ ad().category.name }}</span>
+    <div class="header-right">
+      <time class="ad-date">{{ ad().last_update | date: 'MMM d, yyyy' }}</time>
+    </div>
+  </div>
+
+  <h2 class="ad-title">{{ ad().title }}</h2>
+
+  <div class="ad-meta">
+    <span class="ad-location">
+      <i class="fa-solid fa-location-dot"></i>
+      {{ ad().location }}
+    </span>
+    <span class="ad-price">{{ formatPrice(ad()) }}</span>
+  </div>
+
+  @if (expanded()) {
+    <div class="ad-body" (click)="$event.stopPropagation()">
+      <p class="ad-description">{{ ad().description }}</p>
+      @if (ad().contact) {
+        <div class="ad-contact">
+          <i class="fa-solid fa-envelope"></i>
+          <a [href]="'mailto:' + ad().contact" class="contact-link">{{ ad().contact }}</a>
+        </div>
+      }
+    </div>
+  }
+
+  <button class="expand-btn" [class.expanded]="expanded()" [attr.aria-expanded]="expanded()" aria-label="Toggle details">
+    <span class="chevron"></span>
+  </button>
+</article>

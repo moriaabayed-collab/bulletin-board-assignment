@@ -1,0 +1,14 @@
+<div class="location-widget">
+  <button class="locate-btn" (click)="toggle()" [class.active]="visible()">
+    <i class="fa-solid" [class.fa-location-crosshairs]="!loading()" [class.fa-spinner]="loading()" [class.fa-spin]="loading()"></i>
+    {{ visible() ? 'Hide my location' : 'Show My location' }}
+  </button>
+
+  @if (error()) {
+    <p class="location-error">{{ error() }}</p>
+  }
+
+  <div class="map-container" [class.hidden]="!visible()">
+    <div #mapDiv style="width: 100%; height: 280px;"></div>
+  </div>
+</div>
