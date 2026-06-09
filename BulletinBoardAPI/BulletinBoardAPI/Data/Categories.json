@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Real Estate"
+  },
+  {
+    "id": 2,
+    "name": "Vehicles"
+  },
+  {
+    "id": 3,
+    "name": "Electronics"
+  },
+  {
+    "id": 4,
+    "name": "Jobs"
+  },
+  {
+    "id": 5,
+    "name": "Furniture"
+  },
+  {
+    "id": 6,
+    "name": "Services"
+  }
+]

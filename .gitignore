@@ -1,0 +1,9 @@
+
+
+# Default ignored files
+BulletinBoardAPI/.idea
+BulletinBoardAPI/BulletinBoardAPI/bin
+BulletinBoardAPI/BulletinBoardAPI/obj
+
+BulletinBoardAPI/BulletinBoardAPI.Tests/bin
+BulletinBoardAPI/BulletinBoardAPI.Tests/obj

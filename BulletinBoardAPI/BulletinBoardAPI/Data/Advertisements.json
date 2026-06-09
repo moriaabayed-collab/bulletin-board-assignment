@@ -1,0 +1,134 @@
+[
+  {
+    "id": 2,
+    "title": "2019 Toyota Camry",
+    "description": "test",
+    "category_id": 2,
+    "price": 18500,
+    "currency": "$",
+    "last_update": "2026-06-09T05:42:06.407794Z",
+    "location": "Austin, TX",
+    "contact": "cars@dealer.com"
+  },
+  {
+    "id": 3,
+    "title": "iPhone 15 Pro \u2014 256GB Space Black",
+    "description": "iPhone 15 Pro in perfect condition. 256GB storage, Space Black finish, comes with original box, charger, and unused EarPods. Battery health at 98%. No scratches or dents. Selling because I upgraded to 15 Pro Max.",
+    "category_id": 3,
+    "price": 850,
+    "currency": "$",
+    "last_update": "2026-06-05T00:00:00",
+    "location": "San Francisco, CA",
+    "contact": "techsales@protonmail.com"
+  },
+  {
+    "id": 4,
+    "title": "Senior Frontend Developer \u2014 Remote",
+    "description": "We are looking for a senior frontend developer with 5\u002B years of Angular or React experience. You will lead a team of 3 developers building our customer-facing SaaS platform. Competitive salary, flexible hours, full remote, equity options included.",
+    "category_id": 4,
+    "price": 130000,
+    "currency": "$/year",
+    "last_update": "2026-05-28T00:00:00",
+    "location": "Remote",
+    "contact": "hr@techjobs.io"
+  },
+  {
+    "id": 5,
+    "title": "Solid Oak Dining Table with 6 Chairs",
+    "description": "Beautiful solid oak dining table (200cm \u00D7 90cm) with 6 matching upholstered chairs. Light natural finish, minor surface scratches only. Selling due to move. Original price $2,400 \u2014 now offered at a fraction of that. Must collect.",
+    "category_id": 5,
+    "price": 650,
+    "currency": "$",
+    "last_update": "2026-06-02T00:00:00",
+    "location": "Chicago, IL",
+    "contact": "movingsale@hotmail.com"
+  },
+  {
+    "id": 6,
+    "title": "Professional House Cleaning Service",
+    "description": "Licensed and insured cleaning service for homes and apartments. We use eco-friendly products. Services include deep cleaning, regular maintenance, move-in/out cleaning. 5-star rated on Google with 200\u002B reviews. Free quote on request.",
+    "category_id": 6,
+    "price": 120,
+    "currency": "$/visit",
+    "last_update": "2026-06-04T00:00:00",
+    "location": "Seattle, WA",
+    "contact": null
+  },
+  {
+    "id": 7,
+    "title": "Studio Apartment \u2014 Utilities Included",
+    "description": "Cozy studio apartment perfect for a single professional or student. All utilities included in rent (water, electricity, internet). Furnished with bed, desk, and wardrobe. Building has gym and rooftop access.",
+    "category_id": 1,
+    "price": 950,
+    "currency": "$/month",
+    "last_update": "2026-05-30T00:00:00",
+    "location": "Boston, MA",
+    "contact": "rentals@bostonliving.com"
+  },
+  {
+    "id": 8,
+    "title": "Sony PlayStation 5 \u002B 3 Games",
+    "description": "PlayStation 5 disc edition in great condition. Includes 3 games: Spider-Man 2, God of War Ragnar\u00F6k, and Horizon Forbidden West. All cables and controllers included. Selling because switching to PC gaming.",
+    "category_id": 3,
+    "price": 420,
+    "currency": "$",
+    "last_update": "2026-06-06T00:00:00",
+    "location": "Miami, FL",
+    "contact": "gamesale2026@gmail.com"
+  },
+  {
+    "id": 9,
+    "title": "Freelance Graphic Designer Available",
+    "description": "Experienced graphic designer available for freelance projects. Specialties: branding, logo design, social media graphics, and UI/UX mockups. Portfolio available on request. Fast turnaround and competitive rates.",
+    "category_id": 6,
+    "price": 75,
+    "currency": "$/hour",
+    "last_update": "2026-06-01T00:00:00",
+    "location": "Remote",
+    "contact": "design@creativestudio.net"
+  },
+  {
+    "id": 10,
+    "title": "2022 Trek Marlin 7 Mountain Bike",
+    "description": "2022 Trek Marlin 7 in excellent condition, size L. Hydraulic disc brakes, 1\u00D712 drivetrain, RockShox fork. Serviced last month, new brake pads. Only 600km ridden. Includes lock, pump, and helmet.",
+    "category_id": 2,
+    "price": 780,
+    "currency": "$",
+    "last_update": "2026-06-04T00:00:00",
+    "location": "Denver, CO",
+    "contact": "bikesale@outlook.com"
+  },
+  {
+    "id": 11,
+    "title": "Part-Time Barista \u2014 Coffee Shop",
+    "description": "Local coffee shop looking for an enthusiastic part-time barista. 20-25 hours per week, flexible schedule including weekends. No experience required \u2014 we train. Great team atmosphere, tips included, staff discount on all drinks.",
+    "category_id": 4,
+    "price": 18,
+    "currency": "$/hour",
+    "last_update": "2026-06-05T00:00:00",
+    "location": "Portland, OR",
+    "contact": "jobs@cornerbrewcafe.com"
+  },
+  {
+    "id": 12,
+    "title": "IKEA KALLAX Shelf Unit \u2014 White",
+    "description": "IKEA KALLAX 4\u00D72 shelf unit in white. Perfect for books, decor, or vinyl records. Good condition with minor scuffs on one side. Dimensions: 147cm \u00D7 77cm. Comes disassembled. You pick up only.",
+    "category_id": 5,
+    "price": 60,
+    "currency": "$",
+    "last_update": "2026-06-03T00:00:00",
+    "location": "Los Angeles, CA",
+    "contact": "lamarketplace@gmail.com"
+  },
+  {
+    "id": 13,
+    "title": "Test Bike for Sale",
+    "description": "A great mountain bike in excellent condition, barely used.",
+    "category_id": 2,
+    "price": 500,
+    "currency": "$",
+    "last_update": "2026-06-09T06:02:36.52732Z",
+    "location": "Portland, OR",
+    "contact": null
+  }
+]

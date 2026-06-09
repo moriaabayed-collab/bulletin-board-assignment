@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# 
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BulletinBoardAPI", "BulletinBoardAPI\BulletinBoardAPI.csproj", "{12BC1EC0-BD3B-4F9F-BEC5-61AE8149EFA2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BulletinBoardAPI.Tests", "BulletinBoardAPI.Tests\BulletinBoardAPI.Tests.csproj", "{C9C6967D-4129-48CA-87FD-8FAA0D037EE9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{12BC1EC0-BD3B-4F9F-BEC5-61AE8149EFA2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12BC1EC0-BD3B-4F9F-BEC5-61AE8149EFA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12BC1EC0-BD3B-4F9F-BEC5-61AE8149EFA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12BC1EC0-BD3B-4F9F-BEC5-61AE8149EFA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9C6967D-4129-48CA-87FD-8FAA0D037EE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9C6967D-4129-48CA-87FD-8FAA0D037EE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9C6967D-4129-48CA-87FD-8FAA0D037EE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9C6967D-4129-48CA-87FD-8FAA0D037EE9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
